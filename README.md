@@ -2,7 +2,7 @@
 
 This package is fork of [librette/presenter-factory](https://github.com/librette/presenter-factory). Unfortunately author of this package is not taking care of this package anymore. But it's very useful. So that's why. And now what:
 
-[![Build Status](https://travis-ci.org/mrtnzlml/presenter-factory.svg?branch=master)](https://travis-ci.org/mrtnzlml/presenter-factory)
+[![Build Status](https://travis-ci.org/adeira/presenter-factory.svg?branch=master)](https://travis-ci.org/adeira/presenter-factory)
 
 Nette Framework does have very simple presenter factory which helps you to map namespaces of presenters to the presenter name and vice versa.
 Unfortunately it's not possible to map two namespaces under one module section:
