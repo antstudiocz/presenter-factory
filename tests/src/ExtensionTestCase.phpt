@@ -95,7 +95,7 @@ class ExtensionTestCase extends Tester\TestCase
 
 		Assert::exception(function () {
 			$this->configurator->createContainer();
-		}, '\Librette\Application\PresenterFactory\InvalidStateException');
+		}, \Librette\Application\PresenterFactory\InvalidStateException::class);
 	}
 
 
