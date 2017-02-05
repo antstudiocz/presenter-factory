@@ -1,28 +1,28 @@
 {
-	"name": "adeira/presenter-factory",
-	"keywords": ["nette", "librette", "application", "presenter factory"],
-	"license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
-	"authors": [
-		{
-			"name": "David Matějka",
-			"homepage": "http://www.matej21.cz"
-		}
-	],
-	"require": {
-		"nette/di": "^2.3",
-		"nette/bootstrap": "^2.3",
-		"nette/application": "^2.3",
-		"nette/robot-loader": "^2.3",
-		"tracy/tracy": "^2.3"
-	},
-	"require-dev": {
-		"nette/tester": "dev-master"
-	},
-	"autoload": {
-		"psr-4": {
-			"Librette\\Application\\PresenterFactory\\": "src/"
-		},
-		"files": ["src/exceptions.php"]
-	},
-	"minimum-stability": "stable"
+  "name": "adeira/presenter-factory",
+  "keywords": ["nette", "librette", "application", "presenter factory"],
+  "license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
+  "authors": [
+    {
+      "name": "David Matějka",
+      "homepage": "http://www.matej21.cz"
+    }
+  ],
+  "require": {
+    "nette/di": "^2.3",
+    "nette/bootstrap": "^2.3",
+    "nette/application": "^2.3",
+    "nette/robot-loader": "^2.3",
+    "tracy/tracy": "^2.3"
+  },
+  "require-dev": {
+    "nette/tester": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Librette\\Application\\PresenterFactory\\": "src/"
+    },
+    "files": ["src/exceptions.php"]
+  },
+  "minimum-stability": "stable"
 }
