@@ -1,4 +1,5 @@
-<?php
+<?php declare(strict_types = 1);
+
 namespace LibretteTests\Application\PresenterFactory;
 
 use Librette;
@@ -67,11 +68,10 @@ class GetPresenterClassTestCase extends Tester\TestCase
 class BarPresenter implements Nette\Application\IPresenter
 {
 
-	function run(Request $request)
+	function run(Request $request): Nette\Application\IResponse
 	{
 	}
 
 }
-
 
 \run(new GetPresenterClassTestCase());

@@ -1,4 +1,5 @@
-<?php
+<?php declare(strict_types = 1);
+
 namespace LibretteTests\Application\PresenterFactory;
 
 use Librette;
@@ -67,7 +68,7 @@ class SystemContainer extends Nette\DI\Container
 class PresenterMock extends Nette\Application\UI\Presenter
 {
 
-	function run(Request $request)
+	function run(Request $request): Nette\Application\IResponse
 	{
 	}
 
@@ -81,10 +82,9 @@ class BarPresenterMock implements Nette\Application\IPresenter
 	public $fooPresenter;
 
 
-	function run(Request $request)
+	function run(Request $request): Nette\Application\IResponse
 	{
 	}
 }
-
 
 \run(new PresenterObjectFactoryTestCase());

@@ -1,4 +1,5 @@
-<?php
+<?php declare(strict_types = 1);
+
 namespace Librette\Application\PresenterFactory;
 
 use Nette;
@@ -35,7 +36,7 @@ class PresenterFactory extends Nette\Object implements Application\IPresenterFac
 	}
 
 
-	public function createPresenter($name)
+	public function createPresenter(string $name): Nette\Application\IPresenter
 	{
 		return $this->presenterObjectFactory->createPresenter($this->getPresenterClass($name));
 	}
@@ -48,7 +49,7 @@ class PresenterFactory extends Nette\Object implements Application\IPresenterFac
 	 * @return string  class name
 	 * @throws Application\InvalidPresenterException
 	 */
-	public function getPresenterClass(& $name)
+	public function getPresenterClass(string &$name): string
 	{
 		if (isset($this->cache[$name])) {
 			return $this->cache[$name];
@@ -200,4 +201,5 @@ class PresenterFactory extends Nette\Object implements Application\IPresenterFac
 
 		return NULL;
 	}
+
 }

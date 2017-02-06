@@ -1,9 +1,11 @@
-<?php
+<?php declare(strict_types = 1);
+
 namespace Librette\Application\PresenterFactory;
 
 use Nette\Application\InvalidPresenterException;
 use Nette\Application\IPresenterFactory;
 use Nette\Object;
+use Nette;
 
 /**
  * @author David Matejka
@@ -36,7 +38,7 @@ class ChainedPresenterFactory extends Object implements IPresenterFactory
 	}
 
 
-	function getPresenterClass(& $name)
+	public function getPresenterClass(string &$name): string
 	{
 		$exceptionMessages = [];
 		$lastException = NULL;
@@ -52,9 +54,10 @@ class ChainedPresenterFactory extends Object implements IPresenterFactory
 	}
 
 
-	function createPresenter($name)
+	public function createPresenter(string $name): Nette\Application\IPresenter
 	{
 		return $this->presenterObjectFactory->createPresenter($this->getPresenterClass($name));
 	}
+
 
 }

@@ -1,4 +1,5 @@
-<?php
+<?php declare(strict_types = 1);
+
 namespace LibretteTests\Application\PresenterFactory;
 
 use Librette\Application\PresenterFactory\PresenterFactory;
@@ -71,8 +72,5 @@ class NetteCompatibilityTestCase extends TestCase
 	}
 
 }
-
-
-
 
 run(new NetteCompatibilityTestCase());

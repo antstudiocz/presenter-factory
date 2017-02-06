@@ -1,4 +1,5 @@
-<?php
+<?php declare(strict_types = 1);
+
 namespace LibretteTests\Application\PresenterFactory;
 
 use Librette;
@@ -49,13 +50,13 @@ class ChainedPresenterFactoryTestCase extends Tester\TestCase
 class FailingPresenterFactory implements Nette\Application\IPresenterFactory
 {
 
-	function getPresenterClass(& $name)
+	function getPresenterClass(string &$name): string
 	{
 		throw new Nette\Application\InvalidPresenterException("Unable to create presenter '$name'");
 	}
 
 
-	function createPresenter($name)
+	function createPresenter(string $name): Nette\Application\IPresenter
 	{
 	}
 }
@@ -64,13 +65,13 @@ class FailingPresenterFactory implements Nette\Application\IPresenterFactory
 class FooPresenterFactory implements Nette\Application\IPresenterFactory
 {
 
-	function getPresenterClass(& $name)
+	function getPresenterClass(string &$name): string
 	{
 		return $name . 'Presenter';
 	}
 
 
-	function createPresenter($name)
+	function createPresenter(string $name): Nette\Application\IPresenter
 	{
 	}
 

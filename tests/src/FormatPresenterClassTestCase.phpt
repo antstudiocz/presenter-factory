@@ -1,8 +1,8 @@
-<?php
+<?php declare(strict_types = 1);
+
 namespace LibretteTests\Application\PresenterFactory;
 
 use Librette;
-use Nette;
 use Tester;
 use Tester\Assert;
 
@@ -72,7 +72,5 @@ class FormatPresenterClassTestCase extends Tester\TestCase
 	}
 
 }
-
-
 
 \run(new FormatPresenterClassTestCase());

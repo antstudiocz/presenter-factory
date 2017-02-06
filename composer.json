@@ -6,16 +6,24 @@
     {
       "name": "David Matějka",
       "homepage": "http://www.matej21.cz"
+    },
+    {
+      "name": "Martin Zlámal",
+      "homepage": "https://zlml.cz/"
     }
   ],
   "require": {
-    "nette/di": "^2.3",
-    "nette/bootstrap": "^2.3",
-    "nette/application": "^2.3",
-    "nette/robot-loader": "^2.3",
+    "php": "^7.0",
+    "nette/application": "^3.0@dev",
+    "nette/bootstrap": "^3.0@dev",
+    "nette/component-model": "^3.0@dev",
+    "nette/di": "^3.0@dev",
+    "nette/http": "^3.0@dev",
+    "nette/robot-loader": "^3.0@dev",
     "tracy/tracy": "^2.3"
   },
   "require-dev": {
+    "nette/reflection": "^2.4",
     "nette/tester": "dev-master"
   },
   "autoload": {

@@ -1,4 +1,5 @@
-<?php
+<?php declare(strict_types = 1);
+
 namespace Librette\Application\PresenterFactory\DI;
 
 use Librette\Application\PresenterFactory\InvalidStateException;
@@ -32,7 +33,7 @@ class PresenterFactoryExtension extends Nette\DI\CompilerExtension
 		        ->addSetup('setMapping', [$mappings]);
 
 
-		$config = $this->getConfig($this->defaults);
+		$config = $this->validateConfig($this->defaults);
 		$env = $builder->parameters['debugMode'] ? 'debug' : 'production';
 		$invalidLinkMode = $config['invalidLinkMode'][$env];
 		$builder->addDefinition($this->prefix('presenterObjectFactory'))
@@ -93,6 +94,7 @@ class PresenterFactoryExtension extends Nette\DI\CompilerExtension
 	{
 		$serviceDef = new Nette\DI\ServiceDefinition();
 
-		return $serviceDef->getInject();
+		return $serviceDef->getTag(Nette\DI\Extensions\InjectExtension::TAG_INJECT);
 	}
+
 }
