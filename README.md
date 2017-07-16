@@ -1,3 +1,5 @@
+> At this moment I don't have time, energy and money to maintain this project. But it's a shame so if you depend on this project and you want to become a sponsor or develop it further please don't hesitate to contact me. Otherwise, I am not able to guarantee bright future of this repo... :)
+
 # Enhanced presenter factory for Nette Framework
 
 This package is fork of [librette/presenter-factory](https://github.com/librette/presenter-factory). Unfortunately author of this package is not taking care of this package anymore. But it's very useful. So that's why. And now what:
