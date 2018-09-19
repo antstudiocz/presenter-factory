@@ -37,7 +37,7 @@ class PresenterFactory implements Application\IPresenterFactory
 	}
 
 
-	public function createPresenter(string $name): Nette\Application\IPresenter
+	public function createPresenter($name)
 	{
 		return $this->presenterObjectFactory->createPresenter($this->getPresenterClass($name));
 	}
@@ -50,7 +50,7 @@ class PresenterFactory implements Application\IPresenterFactory
 	 * @return string  class name
 	 * @throws Application\InvalidPresenterException
 	 */
-	public function getPresenterClass(string &$name): string
+	public function getPresenterClass(&$name)
 	{
 		if (isset($this->cache[$name])) {
 			return $this->cache[$name];
