@@ -4,7 +4,6 @@ namespace Librette\Application\PresenterFactory;
 
 use Nette\Application\InvalidPresenterException;
 use Nette\Application\IPresenterFactory;
-use Nette\Object;
 use Nette;
 
 /**

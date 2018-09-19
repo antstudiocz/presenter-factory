@@ -4,7 +4,6 @@ namespace Librette\Application\PresenterFactory;
 
 use Nette;
 use Nette\Application;
-use Nette\Object;
 
 /**
  * @author David Matejka
