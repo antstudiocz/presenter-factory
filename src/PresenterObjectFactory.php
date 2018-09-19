@@ -9,8 +9,9 @@ use Nette\Object;
 /**
  * @author David Matejka
  */
-class PresenterObjectFactory extends Object implements IPresenterObjectFactory
+class PresenterObjectFactory implements IPresenterObjectFactory
 {
+    use Nette\SmartObject;
 
 	/** @var Nette\DI\Container */
 	private $container;

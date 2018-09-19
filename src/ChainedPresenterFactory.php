@@ -10,8 +10,10 @@ use Nette;
 /**
  * @author David Matejka
  */
-class ChainedPresenterFactory extends Object implements IPresenterFactory
+class ChainedPresenterFactory implements IPresenterFactory
 {
+
+    use Nette\SmartObject;
 
 	/** @var IPresenterObjectFactory */
 	protected $presenterObjectFactory;

@@ -14,9 +14,10 @@ use Nette\Application;
  *
  * @method array getMapping()
  */
-class PresenterFactory extends Nette\Object implements Application\IPresenterFactory
+class PresenterFactory implements Application\IPresenterFactory
 {
 
+    use Nette\SmartObject;
 	/** @var array[] of module => splited mask */
 	private $mapping = [];
 
