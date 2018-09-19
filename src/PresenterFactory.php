@@ -12,7 +12,6 @@ use Nette\Application;
  * @author David Grudl
  * @author David Matějka
  *
- * @method array getMapping()
  */
 class PresenterFactory implements Application\IPresenterFactory
 {
@@ -36,6 +35,10 @@ class PresenterFactory implements Application\IPresenterFactory
 		$this->presenterObjectFactory = $presenterObjectFactory;
 	}
 
+	public function getMapping()
+    {
+	    return $this->mapping;
+    }
 
 	public function createPresenter($name)
 	{
