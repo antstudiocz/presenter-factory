@@ -121,7 +121,7 @@ class MyExtension extends Nette\DI\CompilerExtension implements Librette\Applica
 {
 
 
-	public function getPresenterMappings()
+	public function getPresenterMappings(): array
 	{
 		return ['Foo' => 'Foo\\*Module\\*Presenter', 'Bar' => ['*Presenter', 'Bar\\*\\*']];
 	}

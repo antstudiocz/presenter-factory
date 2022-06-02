@@ -8,13 +8,6 @@ namespace Librette\Application\PresenterFactory\DI;
 interface IPresenterMappingProvider
 {
 
-	/**
-	 * returns array of mappings. possible formats:
-	 * array of module => mapping pairs
-	 * array of module => mapping[]
-	 *
-	 * @return array
-	 */
-	public function getPresenterMappings();
+	public function getPresenterMappings(): array;
 
 }

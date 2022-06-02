@@ -40,7 +40,7 @@ class PresenterFactory implements Application\IPresenterFactory
 	    return $this->mapping;
     }
 
-	public function createPresenter($name)
+	public function createPresenter($name): Application\IPresenter
 	{
 		return $this->presenterObjectFactory->createPresenter($this->getPresenterClass($name));
 	}
@@ -53,7 +53,7 @@ class PresenterFactory implements Application\IPresenterFactory
 	 * @return string  class name
 	 * @throws Application\InvalidPresenterException
 	 */
-	public function getPresenterClass(&$name)
+	public function getPresenterClass(&$name): string
 	{
 		if (isset($this->cache[$name])) {
 			return $this->cache[$name];

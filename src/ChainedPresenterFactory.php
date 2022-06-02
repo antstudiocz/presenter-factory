@@ -39,7 +39,7 @@ class ChainedPresenterFactory implements IPresenterFactory
 	}
 
 
-	public function getPresenterClass(&$name)
+	public function getPresenterClass(&$name): string
 	{
 		$exceptionMessages = [];
 		$lastException = NULL;
@@ -55,7 +55,7 @@ class ChainedPresenterFactory implements IPresenterFactory
 	}
 
 
-	public function createPresenter($name)
+	public function createPresenter($name): Nette\Application\IPresenter
 	{
 		return $this->presenterObjectFactory->createPresenter($this->getPresenterClass($name));
 	}
