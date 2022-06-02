@@ -1,5 +1,5 @@
 {
-  "name": "johnyricio/presenter-factory",
+  "name": "antstudiocz/presenter-factory",
   "keywords": ["nette", "librette", "application", "presenter factory"],
   "license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
   "authors": [
@@ -11,13 +11,9 @@
       "name": "Martin Zlámal",
       "homepage": "https://zlml.cz/"
     }
-  ,
-    {
-      "name": "ˇJohnyRicio"
-    }
   ],
   "require": {
-    "php": "8.0.* || 8.1",
+    "php": "8.0.* || 8.1.*",
     "nette/application": "^3",
     "nette/bootstrap": "^3",
     "nette/component-model": "^3",
