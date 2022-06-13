@@ -72,7 +72,7 @@ class PresenterFactory implements Application\IPresenterFactory
 			throw new Application\InvalidPresenterException("Cannot load presenter '$name', none of following classes were found: " . implode(', ', $classes));
 		}
 
-		$reflection = new Nette\Reflection\ClassType($class);
+		$reflection = new \ReflectionClass($class);
 		$class = $reflection->getName();
 
 		if (!$reflection->implementsInterface('Nette\Application\IPresenter')) {

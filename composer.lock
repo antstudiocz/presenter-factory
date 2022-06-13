@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ebf1e8b4e0a8a227e508f1f3d4023b83",
+    "content-hash": "9f0fde37f3789db186d8f0a970e4f6d3",
     "packages": [
         {
             "name": "nette/application",
@@ -91,10 +91,6 @@
                 "routing",
                 "seo"
             ],
-            "support": {
-                "issues": "https://github.com/nette/application/issues",
-                "source": "https://github.com/nette/application/tree/v3.1.7"
-            },
             "time": "2022-06-01T12:25:37+00:00"
         },
         {
@@ -172,10 +168,6 @@
                 "configurator",
                 "nette"
             ],
-            "support": {
-                "issues": "https://github.com/nette/bootstrap/issues",
-                "source": "https://github.com/nette/bootstrap/tree/v3.1.2"
-            },
             "time": "2021-11-24T16:51:46+00:00"
         },
         {
@@ -243,10 +235,6 @@
                 "nette",
                 "sqlite"
             ],
-            "support": {
-                "issues": "https://github.com/nette/caching/issues",
-                "source": "https://github.com/nette/caching/tree/v3.1.3"
-            },
             "time": "2022-05-17T18:30:21+00:00"
         },
         {
@@ -305,10 +293,6 @@
                 "components",
                 "nette"
             ],
-            "support": {
-                "issues": "https://github.com/nette/component-model/issues",
-                "source": "https://github.com/nette/component-model/tree/v3.0.2"
-            },
             "time": "2021-08-25T14:52:12+00:00"
         },
         {
@@ -380,10 +364,6 @@
                 "nette",
                 "static"
             ],
-            "support": {
-                "issues": "https://github.com/nette/di/issues",
-                "source": "https://github.com/nette/di/tree/v3.0.13"
-            },
             "time": "2022-03-10T02:43:04+00:00"
         },
         {
@@ -447,10 +427,6 @@
                 "iterator",
                 "nette"
             ],
-            "support": {
-                "issues": "https://github.com/nette/finder/issues",
-                "source": "https://github.com/nette/finder/tree/v2.5.3"
-            },
             "time": "2021-12-12T17:43:24+00:00"
         },
         {
@@ -525,10 +501,6 @@
                 "session",
                 "url"
             ],
-            "support": {
-                "issues": "https://github.com/nette/http/issues",
-                "source": "https://github.com/nette/http/tree/v3.1.6"
-            },
             "time": "2022-04-02T16:05:07+00:00"
         },
         {
@@ -593,10 +565,6 @@
                 "nette",
                 "yaml"
             ],
-            "support": {
-                "issues": "https://github.com/nette/neon/issues",
-                "source": "https://github.com/nette/neon/tree/v3.3.3"
-            },
             "time": "2022-03-10T02:04:26+00:00"
         },
         {
@@ -661,10 +629,6 @@
                 "php",
                 "scaffolding"
             ],
-            "support": {
-                "issues": "https://github.com/nette/php-generator/issues",
-                "source": "https://github.com/nette/php-generator/tree/v4.0.1"
-            },
             "time": "2022-03-10T02:24:09+00:00"
         },
         {
@@ -729,10 +693,6 @@
                 "nette",
                 "reflection"
             ],
-            "support": {
-                "issues": "https://github.com/nette/reflection/issues",
-                "source": "https://github.com/nette/reflection/tree/master"
-            },
             "abandoned": true,
             "time": "2017-07-11T19:28:57+00:00"
         },
@@ -797,10 +757,6 @@
                 "nette",
                 "trait"
             ],
-            "support": {
-                "issues": "https://github.com/nette/robot-loader/issues",
-                "source": "https://github.com/nette/robot-loader/tree/v3.4.1"
-            },
             "time": "2021-08-25T15:53:54+00:00"
         },
         {
@@ -859,10 +815,6 @@
             "keywords": [
                 "nette"
             ],
-            "support": {
-                "issues": "https://github.com/nette/routing/issues",
-                "source": "https://github.com/nette/routing/tree/v3.0.3"
-            },
             "time": "2022-04-16T23:08:16+00:00"
         },
         {
@@ -921,10 +873,6 @@
                 "config",
                 "nette"
             ],
-            "support": {
-                "issues": "https://github.com/nette/schema/issues",
-                "source": "https://github.com/nette/schema/tree/v1.2.2"
-            },
             "time": "2021-10-15T11:40:02+00:00"
         },
         {
@@ -1006,10 +954,6 @@
                 "utility",
                 "validation"
             ],
-            "support": {
-                "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v3.2.7"
-            },
             "time": "2022-01-24T11:29:14+00:00"
         }
     ],
@@ -1083,10 +1027,6 @@
                 "testing",
                 "unit"
             ],
-            "support": {
-                "issues": "https://github.com/nette/tester/issues",
-                "source": "https://github.com/nette/tester/tree/v2.4.2"
-            },
             "time": "2022-03-24T19:02:37+00:00"
         }
     ],
@@ -1096,8 +1036,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "8.0.* || 8.1"
+        "php": "8.0.* || 8.1.*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "1.1.0"
 }

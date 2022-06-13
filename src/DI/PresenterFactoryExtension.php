@@ -71,24 +71,31 @@ class PresenterFactoryExtension extends Nette\DI\CompilerExtension
 		}
 	}
 
-
 	/**
 	 * @return array
 	 * @throws \Librette\Application\PresenterFactory\InvalidStateException
 	 */
 	protected function getMappingConfig()
 	{
-		$globalConfig = (array) $this->compiler->getConfig();
-		if (isset($globalConfig['application']['mapping']) && isset($globalConfig[$this->name]['mapping'])) {
+		$applicationExtConfig = [];
+		$localExtConfig = [];
+		/** @var Nette\DI\CompilerExtension[] $extensions */
+		$extensions = $this->compiler->getExtensions();
+
+		if (!empty($extensions['application'])) {
+			$applicationExtConfig = (array) $extensions['application']->getConfig();
+		}
+		if (!empty($extensions[$this->name])) {
+			$localExtConfig = (array) $extensions[$this->name]->getConfig();
+		}
+		if (!empty($applicationExtConfig['mapping']) && !empty($localExtConfig['mapping'])) {
 			throw new InvalidStateException("You cannot use both application.mapping and {$this->name}.mapping config section, choose one.");
 		}
-		$userConfig = isset($globalConfig[$this->name]['mapping']) ? $globalConfig[$this->name]['mapping'] :
-			(isset($globalConfig['application']['mapping']) ? $globalConfig['application']['mapping'] : []);
+		$userConfig = $localExtConfig['mapping'] ?? $applicationExtConfig['mapping'] ?? [];
 		$config = Nette\DI\Config\Helpers::merge($userConfig, $this->defaults['mapping']);
 
 		return $config;
 	}
-
 
 	private function shouldAlwaysCallInject()
 	{
