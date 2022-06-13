@@ -1,5 +1,5 @@
 {
-  "name": "johnyricio/presenter-factory",
+  "name": "antstudiocz/presenter-factory",
   "keywords": ["nette", "librette", "application", "presenter factory"],
   "license": ["BSD-3-Clause", "GPL-2.0", "GPL-3.0"],
   "authors": [
@@ -11,24 +11,19 @@
       "name": "Martin Zlámal",
       "homepage": "https://zlml.cz/"
     }
-  ,
-    {
-      "name": "ˇJohnyRicio"
-    }
   ],
   "require": {
-    "php": "^7.1",
-    "nette/application": "^2.4",
-    "nette/bootstrap": "^2.4",
-    "nette/component-model": "^2.4",
-    "nette/di": "^2.4",
-    "nette/http": "^2.4",
-    "nette/robot-loader": ">=2.3",
-    "tracy/tracy": "^2.3"
+    "php": "8.0.* || 8.1.*",
+    "nette/application": "^3",
+    "nette/bootstrap": "^3",
+    "nette/component-model": "^3",
+    "nette/di": "^3",
+    "nette/http": "^3",
+    "nette/robot-loader": "^3",
+    "nette/reflection": "^2.3.0"
   },
   "require-dev": {
-    "nette/reflection": "^2.4",
-    "nette/tester": "dev-master"
+    "nette/tester": "^2"
   },
   "autoload": {
     "psr-4": {

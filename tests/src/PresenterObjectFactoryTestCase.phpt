@@ -25,8 +25,7 @@ class PresenterObjectFactoryTestCase extends Tester\TestCase
 
 	public function testPresenterInDic()
 	{
-		$container = new SystemContainer();
-
+		$container = ContainerFactory::create(FALSE);
 		$presenterObjectFactory = new Librette\Application\PresenterFactory\PresenterObjectFactory($container, 99);
 
 		$object = $presenterObjectFactory->createPresenter($class = 'LibretteTests\Application\PresenterFactory\PresenterMock');
@@ -34,17 +33,14 @@ class PresenterObjectFactoryTestCase extends Tester\TestCase
 		Assert::same(99, $object->invalidLinkMode);
 	}
 
-
 	public function testPresenterNotInDic()
 	{
-		$presenterObjectFactory = new Librette\Application\PresenterFactory\PresenterObjectFactory($dic = new SystemContainer(), 1);
-
-		$object = $presenterObjectFactory->createPresenter($class = 'LibretteTests\Application\PresenterFactory\BarPresenterMock');
-		Assert::type($class, $object);
-		Assert::type('LibretteTests\Application\PresenterFactory\PresenterMock', $object->fooPresenter);
+		Assert::error(function () {
+			$presenterObjectFactory = new Librette\Application\PresenterFactory\PresenterObjectFactory(ContainerFactory::create(FALSE), 1);
+			return $presenterObjectFactory->createPresenter('LibretteTests\Application\PresenterFactory\BarPresenterMock');
+		}, Nette\DI\MissingServiceException::class);
 	}
 }
-
 
 class SystemContainer extends Nette\DI\Container
 {
@@ -58,7 +54,7 @@ class SystemContainer extends Nette\DI\Container
 	];
 
 
-	public function createServiceFooPresenter()
+	public function createServiceFooPresenter(): Nette\Application\UI\Presenter
 	{
 		return new PresenterMock();
 	}

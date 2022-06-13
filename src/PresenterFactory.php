@@ -40,7 +40,7 @@ class PresenterFactory implements Application\IPresenterFactory
 	    return $this->mapping;
     }
 
-	public function createPresenter($name)
+	public function createPresenter($name): Application\IPresenter
 	{
 		return $this->presenterObjectFactory->createPresenter($this->getPresenterClass($name));
 	}
@@ -53,7 +53,7 @@ class PresenterFactory implements Application\IPresenterFactory
 	 * @return string  class name
 	 * @throws Application\InvalidPresenterException
 	 */
-	public function getPresenterClass(&$name)
+	public function getPresenterClass(&$name): string
 	{
 		if (isset($this->cache[$name])) {
 			return $this->cache[$name];
@@ -72,7 +72,7 @@ class PresenterFactory implements Application\IPresenterFactory
 			throw new Application\InvalidPresenterException("Cannot load presenter '$name', none of following classes were found: " . implode(', ', $classes));
 		}
 
-		$reflection = new Nette\Reflection\ClassType($class);
+		$reflection = new \ReflectionClass($class);
 		$class = $reflection->getName();
 
 		if (!$reflection->implementsInterface('Nette\Application\IPresenter')) {

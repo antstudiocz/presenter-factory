@@ -50,13 +50,13 @@ class ChainedPresenterFactoryTestCase extends Tester\TestCase
 class FailingPresenterFactory implements Nette\Application\IPresenterFactory
 {
 
-	function getPresenterClass(&$name)
+	function getPresenterClass(&$name): string
 	{
 		throw new Nette\Application\InvalidPresenterException("Unable to create presenter '$name'");
 	}
 
 
-	function createPresenter($name)
+	function createPresenter($name): Nette\Application\IPresenter
 	{
 	}
 }
@@ -65,13 +65,13 @@ class FailingPresenterFactory implements Nette\Application\IPresenterFactory
 class FooPresenterFactory implements Nette\Application\IPresenterFactory
 {
 
-	function getPresenterClass(&$name)
+	function getPresenterClass(&$name): string
 	{
 		return $name . 'Presenter';
 	}
 
 
-	function createPresenter($name)
+	function createPresenter($name): Nette\Application\IPresenter
 	{
 	}
 
